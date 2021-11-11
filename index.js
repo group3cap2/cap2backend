@@ -11,6 +11,12 @@ dotenv.config();
 //app level middleware
 app.use(express.json());
 
+//router
+const mediaRouter = require("./routers/routes/media");
+
+//routers
+app.use("/media", mediaRouter);
+
 //third party middleware
 app.use(morgan("dev"));
 app.use(helmet());
