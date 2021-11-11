@@ -9,4 +9,5 @@ const getAllMedia = async (req, res) => {
     res.status(200).json(media);
 };
 
+
 module.exports = { getAllMedia };
