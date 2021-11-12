@@ -25,6 +25,7 @@ app.use("/favorite", favRouter);
 //third party middleware
 app.use(morgan("dev"));
 app.use(helmet());
+app.use(cors());
 
 
 const PORT = process.env.PORT;
