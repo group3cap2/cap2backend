@@ -13,14 +13,19 @@ app.use(express.json());
 
 //router
 const mediaRouter = require("./routers/routes/media");
+const authRouter = require("./routers/routes/auth");
+const favRouter = require("./routers/routes/fav");
+
 
 //routers
 app.use("/media", mediaRouter);
+app.use("/auth", authRouter);
+app.use("/favorite", favRouter);
 
 //third party middleware
 app.use(morgan("dev"));
 app.use(helmet());
-app.use(cors());
+
 
 const PORT = process.env.PORT;
 app.listen(PORT, () => {
