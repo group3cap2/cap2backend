@@ -6,6 +6,7 @@ const cors = require("cors");
 
 const app = express();
 dotenv.config();
+app.use(cors())
 
 
 //app level middleware
@@ -26,8 +27,7 @@ app.use("/favorite", favRouter);
 app.use(morgan("dev"));
 app.use(helmet());
 
-
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`Server on ${PORT}`);
   });
