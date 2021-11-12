@@ -20,14 +20,12 @@ const favRouter = require("./routers/routes/fav");
 //routers
 app.use("/media", mediaRouter);
 app.use("/auth", authRouter);
-// app.use("/fav", favRouter);
-
-
+app.use("/favorite", favRouter);
 
 //third party middleware
 app.use(morgan("dev"));
 app.use(helmet());
-app.use(cors());
+
 
 const PORT = process.env.PORT;
 app.listen(PORT, () => {
