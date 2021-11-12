@@ -100,5 +100,5 @@ module.exports = {
   getAllShortFilm,
   getAllTvShow,
   getAllSoftware,
-  getAllEbook
+  getAllEbook,
 };
