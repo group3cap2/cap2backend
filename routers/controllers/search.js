@@ -1,3 +1,6 @@
+const itunesApiSearch = require("itunes-api-search");
+const URL = "https://itunes.apple.com/search";
+
 const searchFunc = (req, res) => {
   const term = req.params.term;
   let result = {};
@@ -14,7 +17,7 @@ const searchFunc = (req, res) => {
           return;
         }
         result = res;
-        console.log(result);
+        // console.log(result);
       }
     )
     .then(() => {
@@ -22,4 +25,4 @@ const searchFunc = (req, res) => {
     });
 };
 
-module.exports = {searchFunc};
+module.exports = { searchFunc };
