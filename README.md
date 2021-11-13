@@ -1,7 +1,11 @@
 # cap2backend
 
 ## About
-This is backend application, using iTunes free search API. Technologies used Node JS, Express JS, Morgan, Helmet, Cors, Dotenv, itunesApiSearch.
+This is backend application, using iTunes free search API. Technologies used Node JS, Express JS, Morgan, Helmet, Cors, Dotenv, axios, itunesApiSearch.
+
+## Heroku
+https://cap2backend.herokuapp.com/
+
 
 ## Prerequisite 
 You should have latest node installed in your computer.
