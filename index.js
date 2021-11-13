@@ -15,12 +15,15 @@ app.use(express.json());
 const mediaRouter = require("./routers/routes/media");
 const authRouter = require("./routers/routes/auth");
 const favRouter = require("./routers/routes/fav");
+const searchRouter = require("./routers/routes/search");
 
 
 //routers
 app.use("/media", mediaRouter);
 app.use("/auth", authRouter);
 app.use("/favorite", favRouter);
+app.use("/search", searchRouter);
+
 
 //third party middleware
 app.use(morgan("dev"));
