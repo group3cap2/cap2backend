@@ -37,53 +37,53 @@ The first router, media it's responsible for showing different types of media fr
 ``` javascript 
 app.use("/media", mediaRouter);
 ````
-It has 10 routes
-```/``` to get all media
-```/movie```  to get movies
-```/podcast```  to get podcasts
-```/music```  to get musics
-```/musicVideo```  to get musicVideos
-```/audiobook```  to get audiobooks
-```/shortFilm```  to get shortFilms
-```/tvShow```  to get tv shows
-```/software```  to get softwares
-```/ebook```  to get ebooks
+It has 10 routes:
+```/media``` to get all media. 
+```/movie```  to get movies. 
+```/podcast```  to get podcasts. 
+```/music```  to get musics. 
+```/musicVideo```  to get musicVideos. 
+```/audiobook```  to get audiobooks. 
+```/shortFilm```  to get shortFilms. 
+```/tvShow```  to get tv shows. 
+```/software```  to get softwares. 
+```/ebook```  to get ebooks. 
 
 
 The second router, auth it's responsible for signin and signup
 ``` javascript 
 app.use("/auth", authRouter);
 ````
-It has 2 routes
-```/signup``` to post new username after check is unique, it takes username and password from body
-```/signin``` to get signin successfully if username and password input from body is a match
+It has 2 routes: 
+```/signup``` to post new username after check is unique, it takes username and password from body. 
+```/signin``` to get signin successfully if username and password input from body is a match. 
 
 
 The third router, favorite it's responsible for adding, remove and showing favorite media
 ``` javascript 
 app.use("/favorite", favRouter);
 ````
-It has 11 routes
-```/movie```  to post favorite movies
-```/podcast```  to post favorite podcasts
-```/music```  to post favorite musics
-```/musicVideo```  to post favorite musicVideos
-```/audiobook```  to post favorite audiobooks
-```/shortFilm```  to post favorite shortFilms
-```/tvShow```  to post favorite tv shows
-```/software```  to post favorite softwares
-```/ebook```  to post favorite ebooks
-They take id from query
-```/``` to delete from favorite
-```/``` to get all favorite media
+It has 11 routes: 
+```/movie```  to post favorite movies. 
+```/podcast```  to post favorite podcasts. 
+```/music```  to post favorite musics.
+```/musicVideo```  to post favorite musicVideos. 
+```/audiobook```  to post favorite audiobooks. 
+```/shortFilm```  to post favorite shortFilms. 
+```/tvShow```  to post favorite tv shows. 
+```/software```  to post favorite softwares. 
+```/ebook```  to post favorite ebooks. 
+They take id from query. 
+```/favorite``` to delete from favorite. 
+```/favorite``` to get all favorite media. 
 
 
 The fourth router, search it's responsible for searching different types of media from iTunes API
 ``` javascript 
 app.use("/search", searchRouter);
 ````
-It has 1 route
-```/:term``` to get the search result, term is any name input in params
+It has 1 route: 
+```/:term``` to get the search result, term is any name input in params.
 
 
 
