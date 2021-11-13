@@ -83,7 +83,7 @@ The fourth router, search it's responsible for searching different types of medi
 app.use("/search", searchRouter);
 ````
 It has 1 route: 
-```/:term``` to get the search result, term is any name input in params.
+```search/:term``` to get the search result, term is any name input in params.
 
 
 
