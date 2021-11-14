@@ -249,13 +249,13 @@ const addToFavEbook = async (req, res) => {
 };
 
 const removeFromFav = (req, res) => {
-  const { id } = req.query;
+  const { id } = req.params;
 
   let found = false;
 
-  fav.forEach((element) => {
+  fav.forEach((element, i) => {
     if (id == element.trackId) {
-      fav.splice(element, 1);
+      fav.splice(i, 1);
       found = true;
     }
   });

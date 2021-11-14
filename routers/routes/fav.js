@@ -33,7 +33,7 @@ favorite.post("/software", addToFavSoftware);
 
 favorite.post("/ebook", addToFavEbook);
 
-favorite.delete("/", removeFromFav);
+favorite.delete("/:id", removeFromFav);
 
 favorite.get("/", getFavorite);
 
