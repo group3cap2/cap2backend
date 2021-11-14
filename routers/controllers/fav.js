@@ -227,7 +227,7 @@ const addToFavEbook = async (req, res) => {
   const { id } = req.query;
   const results = await axios.get(
     "https://itunes.apple.com/search?term=all&media=ebook&limit=10"
-  );
+  ); 
 
   let found = fav.find((item) => {
     return id == item.trackId;
@@ -249,13 +249,14 @@ const addToFavEbook = async (req, res) => {
 };
 
 const removeFromFav = (req, res) => {
-  const { id } = req.query;
-
+  const { id } = req.params;
+   
   let found = false;
 
-  fav.forEach((element) => {
+  fav.forEach((element,i) => {
     if (id == element.trackId) {
-      fav.splice(element, 1);
+      
+      fav.splice(i, 1);
       found = true;
     }
   });
